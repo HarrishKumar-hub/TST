@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { assetPath } from '@/lib/assetPath';
 
 export default function IntroAnimation() {
     return (
@@ -13,7 +14,7 @@ export default function IntroAnimation() {
                     transition={{ duration: 0.8, ease: "easeOut" }}
                 >
                     <Image
-                        src="/images/tst-kumar-logo.svg"
+                        src={assetPath("/images/tst-kumar-logo.svg")}
                         alt="TST Kumar Consultancy Logo"
                         width={200}
                         height={200}

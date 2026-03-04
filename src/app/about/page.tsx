@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { HeavyButton } from '@/components/ui/HeavyButton';
 import Link from 'next/link';
 import { ShieldCheck, Crosshair, MapPin, Truck } from 'lucide-react';
+import { assetPath } from '@/lib/assetPath';
 
 export default function AboutPage() {
     return (
@@ -52,7 +53,7 @@ export default function AboutPage() {
                         className="relative h-[400px] lg:h-[600px] rounded-3xl overflow-hidden shadow-2xl"
                     >
                         <Image
-                            src="/images/tst_tipper_construction_greenorange.png"
+                            src={assetPath("/images/tst_tipper_construction_greenorange.png")}
                             alt="TST Kumar Consultancy Yard"
                             fill
                             className="object-cover object-center"

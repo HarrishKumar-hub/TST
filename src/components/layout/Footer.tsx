@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Phone, MapPin, MessageCircle } from 'lucide-react';
+import { assetPath } from '@/lib/assetPath';
 
 export default function Footer() {
     return (
@@ -14,7 +15,7 @@ export default function Footer() {
                     <div className="space-y-6">
                         <div className="flex items-center gap-4 group">
                             <div className="bg-white p-2 rounded-sm transform group-hover:-rotate-3 transition-transform inline-block">
-                                <Image src="/images/tst-kumar-logo.svg" alt="TST Kumar Logo" width={56} height={56} />
+                                <Image src={assetPath("/images/tst-kumar-logo.svg")} alt="TST Kumar Logo" width={56} height={56} />
                             </div>
                             <h3 className="text-2xl font-black text-text-slate-dark tracking-wide whitespace-nowrap">
                                 <span style={{ fontFamily: "'Clarendon Bold', 'Clarendon', serif", letterSpacing: "0.02em" }}>

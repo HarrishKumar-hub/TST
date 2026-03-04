@@ -1,3 +1,5 @@
+import { assetPath } from "@/lib/assetPath";
+
 export interface InventoryItem {
     id: string;
     slug: string;
@@ -31,11 +33,11 @@ export const inventoryData: InventoryItem[] = [
         price: "Call for Pricing",
         location: "Sankari Yard",
         specs: ["2018", "160 HP", "6-Wheeler", "Excellent Condition", "Original RC", "Clear NOC"],
-        imageSrc: "/images/kanda_tipper_1.jpeg",
+        imageSrc: assetPath("/images/kanda_tipper_1.jpeg"),
         gallery: [
-            "/images/kanda_tipper_1.jpeg",
-            "/images/tst_hero_tipper.jpg",
-            "/images/kanda_tipper_3.jpeg"
+            assetPath("/images/kanda_tipper_1.jpeg"),
+            assetPath("/images/tst_hero_tipper.jpg"),
+            assetPath("/images/kanda_tipper_3.jpeg"),
         ],
         description: "A meticulously maintained 2018 Ashok Leyland 1612. This 6-wheel tipper has passed all 6 stages of the Kumar Standard inspection. The chassis is strictly original with zero unauthorized welds. Perfect for aggregate hauling and mid-scale construction projects.",
         features: [
@@ -58,11 +60,11 @@ export const inventoryData: InventoryItem[] = [
         price: "Call for Pricing",
         location: "Sankari Yard",
         specs: ["2019", "120 HP", "6-Wheeler", "Recently Serviced", "Original Paint", "Ready to Work"],
-        imageSrc: "/images/tst_hero_tipper.jpg",
+        imageSrc: assetPath("/images/tst_hero_tipper.jpg"),
         gallery: [
-            "/images/tst_hero_tipper.jpg",
-            "/images/kanda_tipper_1.jpeg",
-            "/images/kanda_tipper_3.jpeg"
+            assetPath("/images/tst_hero_tipper.jpg"),
+            assetPath("/images/kanda_tipper_1.jpeg"),
+            assetPath("/images/kanda_tipper_3.jpeg"),
         ],
         description: "The legendary Tata SK 1212. Known for its unbreakable nature in the toughest South Indian terrains. This specific 2019 unit features the original factory paint on the cabin, proving it hasn't been in any major accidents. The engine block has been compression-tested and runs exceptionally clean.",
         features: [
@@ -85,11 +87,11 @@ export const inventoryData: InventoryItem[] = [
         price: "Call for Pricing",
         location: "Sankari Yard",
         specs: ["2021", "170 HP", "6-Wheeler", "Mining Spec", "High Torque", "Premium Cabin"],
-        imageSrc: "/images/kanda_tipper_3.jpeg",
+        imageSrc: assetPath("/images/kanda_tipper_3.jpeg"),
         gallery: [
-            "/images/kanda_tipper_3.jpeg",
-            "/images/kanda_tipper_1.jpeg",
-            "/images/tst_hero_tipper.jpg"
+            assetPath("/images/kanda_tipper_3.jpeg"),
+            assetPath("/images/kanda_tipper_1.jpeg"),
+            assetPath("/images/tst_hero_tipper.jpg"),
         ],
         description: "A modern, high-power BharatBenz 1217C built for heavy payload and continuous operation. As a 2021 model, it features a highly refined cabin and superior fuel efficiency. This unit is in 'Mining Spec', meaning it was ordered with heavy-duty factory upgrades for extreme environments.",
         features: [
@@ -104,4 +106,3 @@ export const inventoryData: InventoryItem[] = [
 export function getInventoryBySlug(slug: string): InventoryItem | undefined {
     return inventoryData.find(item => item.slug === slug);
 }
-

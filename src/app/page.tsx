@@ -9,13 +9,14 @@ import { useRef, useState, useEffect } from 'react';
 import { ShieldCheck, Truck, CircleAlert, MapPin } from "lucide-react";
 import { inventoryData } from "@/data/inventory";
 import StatsStrip from "@/components/ui/StatsStrip";
+import { assetPath } from "@/lib/assetPath";
 
 export default function Home() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const heroImages = [
-    { src: "/images/tst_tipper_highway_yellow.png", align: "object-cover object-center" },
-    { src: "/images/tst_tipper_construction_green.png", align: "object-cover object-center" },
-    { src: "/images/tst_tipper_green_yellow_road.png", align: "object-cover object-center" }
+    { src: assetPath("/images/tst_tipper_highway_yellow.png"), align: "object-cover object-center" },
+    { src: assetPath("/images/tst_tipper_construction_green.png"), align: "object-cover object-center" },
+    { src: assetPath("/images/tst_tipper_green_yellow_road.png"), align: "object-cover object-center" }
   ];
 
   useEffect(() => {
@@ -160,7 +161,7 @@ export default function Home() {
               <div className="absolute inset-0 bg-brand-green transform translate-x-4 translate-y-4 rounded-3xl transition-transform group-hover:translate-x-6 group-hover:translate-y-6"></div>
               <div className="relative h-full w-full bg-white overflow-hidden rounded-3xl shadow-xl">
                 <Image
-                  src="/images/kanda_tipper_3.jpeg"
+                  src={assetPath("/images/kanda_tipper_3.jpeg")}
                   alt="Yard Inspection"
                   fill
                   className="object-cover transform group-hover:scale-105 transition-transform duration-700"
@@ -189,9 +190,9 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { title: "10-Wheel Tippers", count: "12 In Stock", src: "/images/kanda_tipper_1.jpeg" },
-              { title: "6-Wheel Tippers", count: "8 In Stock", src: "/images/tst_hero_tipper.jpg" },
-              { title: "Heavy Excavators", count: "4 In Stock", src: "/images/kanda_tipper_3.jpeg" }
+              { title: "10-Wheel Tippers", count: "12 In Stock", src: assetPath("/images/kanda_tipper_1.jpeg") },
+              { title: "6-Wheel Tippers", count: "8 In Stock", src: assetPath("/images/tst_hero_tipper.jpg") },
+              { title: "Heavy Excavators", count: "4 In Stock", src: assetPath("/images/kanda_tipper_3.jpeg") }
             ].map((category, idx) => (
               <div key={idx} className="group relative h-96 bg-bg-dark overflow-hidden rounded-3xl cursor-pointer block">
                 <Image src={category.src} fill className="object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700" alt={category.title} />

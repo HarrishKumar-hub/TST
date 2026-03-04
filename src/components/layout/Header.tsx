@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Menu, X, Truck, Settings } from 'lucide-react';
 import { useState } from 'react';
+import { assetPath } from '@/lib/assetPath';
 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
@@ -23,7 +24,7 @@ export default function Header() {
                     <div className="flex items-center">
                         <Link href="/" className="flex items-center gap-4 group">
                             <Image
-                                src="/images/tst-kumar-logo.svg"
+                                src={assetPath("/images/tst-kumar-logo.svg")}
                                 alt="TST Kumar Logo"
                                 width={96}
                                 height={96}
