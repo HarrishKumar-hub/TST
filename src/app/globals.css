@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@theme {
+  /* Modern Fintech Blue Palette */
+  --color-brand-gold: #0F172A;
+  /* Slate 900 - Replaces the gold with a high-end dark slate for text/accents */
+  --color-brand-green: #2563EB;
+  /* Electric Blue - The core modern tech brand color */
+  --color-brand-green-light: #3B82F6;
+  /* Lighter Blue for gradients */
+
+  --color-bg-white: #ffffff;
+  --color-bg-gray: #F8FAFC;
+  /* Slate 50 - Ultra-clean modern off-white */
+  --color-text-slate: #334155;
+  --color-text-slate-dark: #0F172A;
+  --color-bg-dark: #FFFFFF;
+
+  --font-sans: var(--font-sans), system-ui, -apple-system, sans-serif;
+  --font-heading: var(--font-heading), system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-bg-white);
+    color: var(--color-text-slate);
+    font-family: var(--font-sans);
+    min-height: 100vh;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 700;
+    color: var(--color-text-slate);
+    font-family: var(--font-heading);
+    letter-spacing: 0.025em;
+  }
+}
+
+@layer utilities {
+  .clip-path-slant {
+    clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
+  }
+
+  .clip-path-slant-rev {
+    clip-path: polygon(5% 0, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  .text-shadow-light {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .glass-panel {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+  }
+
+  .glass-dark {
+    background: rgba(30, 37, 40, 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .mesh-gradient {
+    background-color: #ffffff;
+    background-image: radial-gradient(at 40% 20%, hsla(28, 100%, 74%, 0.15) 0px, transparent 50%),
+      radial-gradient(at 80% 0%, hsla(189, 100%, 56%, 0.15) 0px, transparent 50%),
+      radial-gradient(at 0% 50%, hsla(355, 100%, 93%, 0.1) 0px, transparent 50%);
+  }
+}
+
+/* Intro Animation Keyframes */
+@keyframes reveal-container {
+  0% {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  80% {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  100% {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+}
+
+.intro-overlay {
+  animation: reveal-container 3s forwards;
+}
