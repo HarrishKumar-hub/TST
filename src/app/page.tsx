@@ -14,10 +14,10 @@ import { assetPath } from "@/lib/assetPath";
 export default function Home() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const heroImages = [
-    { src: "/images/kanda_tipper_2.jpeg", align: "object-cover object-center" },
-    { src: "/images/kanda_tipper_1.jpeg", align: "object-cover object-center" },
-    { src: "/images/kanda_tipper_3.jpeg", align: "object-cover object-center" },
-    { src: "/images/WhatsApp Image 2026-02-28 at 3.22.32 PM (1).jpeg", align: "object-cover object-center" }
+    { src: assetPath("/images/kanda_tipper_2.jpeg"), align: "object-cover object-center" },
+    { src: assetPath("/images/kanda_tipper_1.jpeg"), align: "object-cover object-center" },
+    { src: assetPath("/images/kanda_tipper_3.jpeg"), align: "object-cover object-center" },
+    { src: assetPath("/images/WhatsApp Image 2026-02-28 at 3.22.32 PM (1).jpeg"), align: "object-cover object-center" }
   ];
 
   useEffect(() => {
@@ -117,17 +117,17 @@ export default function Home() {
                 {
                   title: "Ashok Leyland 1612 Tipper Handover",
                   location: "Sankari Yard",
-                  src: "/images/kanda_tipper_1.jpeg"
+                  src: assetPath("/images/kanda_tipper_1.jpeg")
                 },
                 {
                   title: "Tata SK 1212 Heavy Tipper Delivery",
                   location: "Salem Region",
-                  src: "/images/tst_hero_tipper.jpg"
+                  src: assetPath("/images/tst_hero_tipper.jpg")
                 },
                 {
                   title: "BharatBenz Mining Spec Tipper Dispatch",
                   location: "Namakkal Yard",
-                  src: "/images/kanda_tipper_3.jpeg"
+                  src: assetPath("/images/kanda_tipper_3.jpeg")
                 }
               ].map((handover, idx) => (
               <motion.div

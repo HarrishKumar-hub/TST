@@ -24,7 +24,7 @@ export default function Header() {
                     <div className="flex items-center">
                         <Link href="/" className="flex items-center gap-4 group">
                             <Image
-                                src="/images/tst-kumar-logo.svg"
+                                src={assetPath("/images/tst-kumar-logo.svg")}
                                 alt="TST Truck Icon"
                                 width={80}
                                 height={80}
@@ -32,7 +32,7 @@ export default function Header() {
                                 priority
                             />
                             <Image
-                                src="/images/logo_text.png"
+                                src={assetPath("/images/logo_text.png")}
                                 alt="TST Kumar Consultancy"
                                 width={200}
                                 height={64}

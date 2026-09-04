@@ -53,7 +53,7 @@ export default function AboutPage() {
                         className="relative h-[400px] lg:h-[600px] rounded-3xl overflow-hidden shadow-2xl"
                     >
                         <Image
-                            src="/images/tst_tipper_construction_greenorange.png"
+                            src={assetPath("/images/tst_tipper_construction_greenorange.png")}
                             alt="TST Kumar Consultancy Yard"
                             fill
                             className="object-cover object-center"

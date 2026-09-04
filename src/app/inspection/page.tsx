@@ -59,7 +59,7 @@ export default function Inspection() {
                         <div className="absolute inset-0 bg-amber-600 rounded-3xl transform translate-x-3 translate-y-3 transition-transform group-hover:translate-x-4 group-hover:translate-y-4"></div>
                         <div className="relative h-full w-full bg-white overflow-hidden rounded-3xl shadow-xl border border-gray-200">
                             <Image
-                                src="/images/kanda_tipper_2.jpeg"
+                                src={assetPath("/images/kanda_tipper_2.jpeg")}
                                 alt="Kumar Standard Mechanical Inspection in Sankari Yard"
                                 fill
                                 className="object-cover transform group-hover:scale-105 transition-transform duration-700"
