@@ -4,8 +4,6 @@ import './globals.css';
 import IntroAnimation from '@/components/ui/IntroAnimation';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
-import FloatingWhatsApp from '@/components/ui/FloatingWhatsApp';
-import StickyCallBar from '@/components/ui/StickyCallBar';
 import ExitIntentPopup from '@/components/ui/ExitIntentPopup';
 
 const inter = Inter({
@@ -41,8 +39,6 @@ export default function RootLayout({
         <Footer />
 
         {/* Global Lead Generation Features */}
-        <FloatingWhatsApp />
-        <StickyCallBar />
         <ExitIntentPopup />
       </body>
     </html>
