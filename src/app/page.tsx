@@ -14,10 +14,10 @@ import { assetPath } from "@/lib/assetPath";
 export default function Home() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const heroImages = [
-    { src: assetPath("/images/kanda_tipper_2.jpeg"), align: "object-cover object-center" },
-    { src: assetPath("/images/kanda_tipper_1.jpeg"), align: "object-cover object-center" },
-    { src: assetPath("/images/kanda_tipper_3.jpeg"), align: "object-cover object-center" },
-    { src: assetPath("/images/WhatsApp Image 2026-02-28 at 3.22.32 PM (1).jpeg"), align: "object-cover object-center" }
+    { src: assetPath("/images/hero_bg_1.png"), align: "object-cover object-center" },
+    { src: assetPath("/images/hero_bg_2.png"), align: "object-cover object-center" },
+    { src: assetPath("/images/hero_bg_3.png"), align: "object-cover object-center" },
+    { src: assetPath("/images/hero_bg_4.png"), align: "object-cover object-center" }
   ];
 
   useEffect(() => {
