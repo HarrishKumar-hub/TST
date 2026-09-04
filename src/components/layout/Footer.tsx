@@ -75,16 +75,6 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
-
-            {/* Floating Mobile Footer */}
-            <div className="md:hidden fixed bottom-0 left-0 w-full z-50 bg-white border-t border-gray-200 shadow-[0_-10px_40px_rgba(0,0,0,0.05)] flex">
-                <a href="tel:+919443744349" className="flex-1 flex items-center justify-center gap-2 py-4 bg-bg-gray text-text-slate-dark font-sans font-bold text-sm border-r border-gray-200 transition-colors hover:bg-gray-100">
-                    <Phone size={18} className="text-brand-green" /> Call Dealer
-                </a>
-                <a href="https://api.whatsapp.com/send?phone=919443744349" className="flex-1 flex items-center justify-center gap-2 py-4 bg-[#25D366] text-white font-sans font-bold text-sm transition-colors hover:bg-[#20bd5a]">
-                    <MessageCircle size={18} /> WhatsApp
-                </a>
-            </div>
         </footer>
     );
 }
