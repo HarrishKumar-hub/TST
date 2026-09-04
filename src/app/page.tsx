@@ -59,12 +59,10 @@ export default function Home() {
               transition={{ duration: 1, ease: "easeInOut" }}
               className="absolute inset-0 z-0"
             >
-              <Image
+              <img
                 src={heroImages[currentImageIndex].src}
                 alt="Heavy Duty Machinery Digital Showroom"
-                fill
-                className={heroImages[currentImageIndex].align}
-                priority={currentImageIndex === 0}
+                className={`w-full h-full ${heroImages[currentImageIndex].align}`}
               />
             </motion.div>
           </AnimatePresence>
