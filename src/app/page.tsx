@@ -14,10 +14,10 @@ import { assetPath } from "@/lib/assetPath";
 export default function Home() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const heroImages = [
-    { src: assetPath("/images/hero_bg_1.png"), align: "object-cover object-center" },
-    { src: assetPath("/images/hero_bg_2.png"), align: "object-cover object-center" },
-    { src: assetPath("/images/hero_bg_3.png"), align: "object-cover object-center" },
-    { src: assetPath("/images/hero_bg_4.png"), align: "object-cover object-center" }
+    { src: "/images/hero_bg_1.png", align: "object-cover object-center" },
+    { src: "/images/hero_bg_2.png", align: "object-cover object-center" },
+    { src: "/images/hero_bg_3.png", align: "object-cover object-center" },
+    { src: "/images/hero_bg_4.png", align: "object-cover object-center" }
   ];
 
   useEffect(() => {
@@ -110,23 +110,23 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Ashok Leyland 1612 Tipper Handover",
-                location: "Sankari Yard",
-                src: assetPath("/images/kanda_tipper_1.jpeg")
-              },
-              {
-                title: "Tata SK 1212 Heavy Tipper Delivery",
-                location: "Salem Region",
-                src: assetPath("/images/tst_hero_tipper.jpg")
-              },
-              {
-                title: "BharatBenz Mining Spec Tipper Dispatch",
-                location: "Namakkal Yard",
-                src: assetPath("/images/kanda_tipper_3.jpeg")
-              }
-            ].map((handover, idx) => (
+              {[
+                {
+                  title: "Ashok Leyland 1612 Tipper Handover",
+                  location: "Sankari Yard",
+                  src: "/images/kanda_tipper_1.jpeg"
+                },
+                {
+                  title: "Tata SK 1212 Heavy Tipper Delivery",
+                  location: "Salem Region",
+                  src: "/images/tst_hero_tipper.jpg"
+                },
+                {
+                  title: "BharatBenz Mining Spec Tipper Dispatch",
+                  location: "Namakkal Yard",
+                  src: "/images/kanda_tipper_3.jpeg"
+                }
+              ].map((handover, idx) => (
               <motion.div
                 key={idx}
                 initial={{ opacity: 0, y: 30 }}
