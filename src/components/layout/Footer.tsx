@@ -14,14 +14,18 @@ export default function Footer() {
 
                     <div className="space-y-6">
                         <div className="flex items-center gap-3 group">
-                            <img
-                                src={assetPath("/images/tst-kumar-logo.svg")}
+                            <Image
+                                src="/images/tst-kumar-logo.svg"
                                 alt="TST Truck Icon"
+                                width={60}
+                                height={60}
                                 className="h-12 w-auto object-contain transform group-hover:-rotate-3 transition-transform shrink-0"
                             />
-                            <img
-                                src={assetPath("/images/logo_text.png")}
+                            <Image
+                                src="/images/logo_text.png"
                                 alt="TST Kumar Consultancy"
+                                width={160}
+                                height={48}
                                 className="h-10 w-auto object-contain transform group-hover:scale-105 transition-transform"
                             />
                         </div>

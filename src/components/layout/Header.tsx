@@ -23,15 +23,21 @@ export default function Header() {
                 <div className="flex justify-between items-center py-5 min-h-[6.5rem]">
                     <div className="flex items-center">
                         <Link href="/" className="flex items-center gap-4 group">
-                            <img
-                                src={assetPath("/images/tst-kumar-logo.svg")}
+                            <Image
+                                src="/images/tst-kumar-logo.svg"
                                 alt="TST Truck Icon"
+                                width={80}
+                                height={80}
                                 className="h-16 md:h-20 w-auto object-contain transform group-hover:-rotate-3 transition-transform shrink-0"
+                                priority
                             />
-                            <img
-                                src={assetPath("/images/logo_text.png")}
+                            <Image
+                                src="/images/logo_text.png"
                                 alt="TST Kumar Consultancy"
+                                width={200}
+                                height={64}
                                 className="h-12 md:h-16 w-auto object-contain transform group-hover:scale-105 transition-transform"
+                                priority
                             />
                         </Link>
                     </div>

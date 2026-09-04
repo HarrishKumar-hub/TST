@@ -1,5 +1,6 @@
 'use client';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { ShieldCheck, Gauge, Hammer, Cog, CircleDashed, Armchair } from 'lucide-react';
 import { assetPath } from '@/lib/assetPath';
 
@@ -57,10 +58,11 @@ export default function Inspection() {
                     <div className="relative aspect-[4/3] w-full group">
                         <div className="absolute inset-0 bg-amber-600 rounded-3xl transform translate-x-3 translate-y-3 transition-transform group-hover:translate-x-4 group-hover:translate-y-4"></div>
                         <div className="relative h-full w-full bg-white overflow-hidden rounded-3xl shadow-xl border border-gray-200">
-                            <img
-                                src={assetPath("/images/kanda_tipper_2.jpeg")}
+                            <Image
+                                src="/images/kanda_tipper_2.jpeg"
                                 alt="Kumar Standard Mechanical Inspection in Sankari Yard"
-                                className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+                                fill
+                                className="object-cover transform group-hover:scale-105 transition-transform duration-700"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                             <div className="absolute bottom-6 left-6 right-6 p-5 bg-white/95 backdrop-blur-md rounded-2xl shadow-lg border border-amber-200/80 flex items-center justify-between">
