@@ -43,7 +43,7 @@ export default function Home() {
   return (
     <div className="bg-bg-white text-text-slate selection:bg-brand-green selection:text-white">
       {/* Full-Bleed Cinematic Hero Section */}
-      <section ref={heroRef} className="relative w-full min-h-[85vh] h-[85vh] flex items-center overflow-hidden bg-text-slate-dark">
+      <section ref={heroRef} className="relative w-full min-h-[85vh] h-[85vh] flex items-center overflow-hidden bg-black">
 
         {/* Full-Bleed Background Slideshow */}
         <motion.div
@@ -69,9 +69,6 @@ export default function Home() {
             </motion.div>
           </AnimatePresence>
         </motion.div>
-
-        {/* Subtle Dark Overlay */}
-        <div className="absolute inset-0 z-[1] bg-black/30 pointer-events-none" />
       </section>
 
       {/* Brand Hook Section */}
